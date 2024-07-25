@@ -6,3 +6,7 @@ links:
     url: "https://www.railstutorial.org"
     book: "https://www.railstutorial.org/book"
     help: "https://www.railstutorial.org/help"
+user:
+  maxlength_user_name: 50
+  maxlength_user_email: 255
+  valid_email: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
