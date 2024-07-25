@@ -1,0 +1,11 @@
+<% provide :title, t("static_pages.home.title") %>
+<h1>SampleApp</h1>
+<h3><%= t "static_pages.home.content.welcome" %></h3>
+<p>
+<%=
+  t("static_pages.home.content.main",
+    rails_url: link_to(
+      t(".content.rails"), Settings.links.rails.url).html_safe,
+  ).html_safe
+%>
+</p>
