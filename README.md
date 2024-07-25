@@ -1,5 +1,4 @@
 # Rails tutorial - Sample App
-
 # 1. Phiên bản cài đặt để chạy được dự án:
 - Ruby: 3.2.2
 - Rails: 7.0.7
@@ -11,5 +10,3 @@
 - Chạy lệnh để tạo database: rails db:create
 - Bật server: rails s
 Truy cập đường dẫn http://localhost:3000/ hiển thị Rails là thành công
-
-
