@@ -8,6 +8,10 @@ vi:
         home: "Trang chủ"
         help: "Trợ giúp"
         log_in: "Đăng nhập"
+        log_out: "Đăng xuất"
+        profile: "Hồ sơ"
+        settings: "Cài đặt"
+        users: "Người dùng"
   static_pages:
     help:
       title: "Trợ giúp"
@@ -31,9 +35,6 @@ vi:
         name: "Tên"
         email: "Email"
         password: "Mật Khẩu"
-    errors:
-      error: "Lỗi"
-      the_form_contains: "Form có"
   users:
     message:
       new: "Tạo người dùng thành công"
@@ -43,3 +44,24 @@ vi:
       form:
         confirmation: "Xác nhận"
         submit_button: "Tạo tài khoản"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      form:
+        submit_button: "Đăng nhập"
+        sign_up_now: "Đăng ký ngay !"
+        new_user?: "Bạn là người dùng mới?"
+        email: "Email"
+        password: "Mật khẩu"
+        submit_button: "Đăng nhập"
+    create:
+      message:
+        invalid_email_password_combination: "Mật khẩu hoặc email không hợp lệ"
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+  shared:
+    error_messages:
+      error: "Lỗi"
+      the_form_contains: "Form có"
