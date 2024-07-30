@@ -12,6 +12,7 @@ vi:
         profile: "Hồ sơ"
         settings: "Cài đặt"
         users: "Người dùng"
+        account: "Tài khoản"
   static_pages:
     help:
       title: "Trợ giúp"
@@ -39,11 +40,25 @@ vi:
     message:
       new: "Tạo người dùng thành công"
       not_found: "Không tìm thấy người dùng!"
+      user_updated: "Cập nhật thành công"
+      please_log_in: "Vui lòng đăng nhập để tiếp tục"
+      cannot_edit: "Bạn không thể chỉnh sửa"
+      user_deleted: "Đã xóa tài khoản người dùng"
+      delete_fail: "Xóa thất bại"
+      not_authorized: "Tài khoản của bạn chưa được cấp quyền thực hiện chức năng này"
     new:
       title: "Đăng ký"
-      form:
-        confirmation: "Xác nhận"
-        submit_button: "Tạo tài khoản"
+    edit:
+      title: "Chỉnh sửa thông tin"
+      change: "Thay đổi"
+    user:
+      delete: "Xóa"
+      confirm: "Vui lòng xác nhận"
+    index:
+      title: "Danh sách người dùng"
+    form:
+      submit_button: "Lưu"
+      password_confirmation: "Xác nhận"
   sessions:
     new:
       title: "Đăng nhập"
