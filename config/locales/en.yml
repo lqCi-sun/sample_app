@@ -46,6 +46,7 @@ en:
       user_deleted: "User deleted"
       delete_fail: "Delete fail!"
       not_authorized: "You are not authorized to perform this action."
+      check_mail: "Please check your email to activate your account."
     new:
       title: "Sign up"
     edit:
@@ -59,6 +60,12 @@ en:
     form:
       submit_button: "Submit"
       password_confirmation: "Confirmation"
+  user_mailer:
+    message:
+      hi: "Hi "
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    account_activation: "Account activation"
   sessions:
     new:
       title: "Log in"
@@ -73,6 +80,7 @@ en:
     create:
       message:
         invalid_email_password_combination: "Invalid email password combination"
+        warning_account_not_activated: "Account not activated. Check your email for the activation link."
     attributes:
       user:
         email: "Email"
@@ -81,3 +89,8 @@ en:
     error_messages:
       error: "error"
       the_form_contains: "The form contains"
+  account_activations:
+    edit:
+      message:
+        account_activated: "Account activated!"
+        invalid_activation_link: "Invalid activation link"
