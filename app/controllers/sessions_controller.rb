@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
   before_action :load_user, only: :create
 
-  def new; end
-
   def create
     if @user.authenticate params.dig(:session, :password)
       reset_session
       log_in @user
+      remember_me = params.dig(:session, :remember_me)
+      remember_me == "1" ? remember(@user) : forget(@user)
       redirect_to @user, status: :see_other
     else
       flash.now[:danger] = t ".message.invalid_email_password_combination"

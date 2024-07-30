@@ -54,6 +54,7 @@ vi:
         email: "Email"
         password: "Mật khẩu"
         submit_button: "Đăng nhập"
+        remember_me: "Lưu tài khoản"
     create:
       message:
         invalid_email_password_combination: "Mật khẩu hoặc email không hợp lệ"

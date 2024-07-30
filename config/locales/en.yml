@@ -54,6 +54,7 @@ en:
         email: "Email"
         password: "Password"
         submit_button: "Log in"
+        remember_me: "Remember me"
     create:
       message:
         invalid_email_password_combination: "Invalid email password combination"
