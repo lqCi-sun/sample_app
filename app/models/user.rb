@@ -1,16 +1,21 @@
 class User < ApplicationRecord
   USER_PARAMS = %i(name email password password_confirmation).freeze
-  VALID_EMAIL_REGEX = Regexp.new(Settings.user.valid_email)
+  VALID_EMAIL_REGEX = Regexp.new(Settings.user.email.valid)
 
   validates :name, presence: true,
-    length: {maximum: Settings.user.maxlength_user_name}
+    length: {maximum: Settings.user.name.max_length}
   validates :email, presence: true,
-    length: {maximum: Settings.user.maxlength_user_email},
-    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+    length: {maximum: Settings.user.email.max_length},
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false},
+    allow_nil: true
 
   before_save :downcase_email
   has_secure_password
   attr_accessor :remember_token
+
+  scope :sorted, ->(order_by = 'name', direction = 'asc') {
+    order(order_by => direction)
+  }
 
   class << self
     def digest string
