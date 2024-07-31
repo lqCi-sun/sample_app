@@ -65,6 +65,12 @@ vi:
       hi: "Chào "
       welcome: "chào mừng đến với Sample App! Nhấp vào link sau đây để kích hoạt tài khoản:"
       activate: "Kích hoạt"
+      subject_reset: "Thay đổi mật khẩu"
+      password_reset: "Thay đổi mật khẩu"
+      reset_password: "Thay đổi mật khẩu"
+      password_reset_text: "Để thay đổi mật khẩu, ấn vàO link sau:"
+      password_reset_noti: "Link hoạt động trong 2 giờ."
+      password_reset_confirm: "Nếu không muốn thay đổi mật khẩu, hãy bỏ qua"
     account_activation: "Kích hoạt tài khoản"
   sessions:
     new:
@@ -77,6 +83,7 @@ vi:
         password: "Mật khẩu"
         submit_button: "Đăng nhập"
         remember_me: "Lưu tài khoản"
+        forgot_password: "(Quên mật khẩu)"
     create:
       message:
         invalid_email_password_combination: "Mật khẩu hoặc email không hợp lệ"
@@ -93,3 +100,26 @@ vi:
       message:
         account_activated: "Đã kích hoạt"
         invalid_activation_link: "Không đúng link"
+  password_resets:
+    new:
+      title: "Quên mật khẩu"
+      form:
+        email: "Email"
+        submit_button: "Gửi"
+    create:
+      message:
+        info_email: "Thư đã được gửi, hãy kiểm tra."
+        danger_email_not_found: "Không tồn tại email"
+    edit:
+      title: "Đặt lại mật khẩu"
+      form:
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận"
+        submit_button: "Cập nhật mật khẩu"
+    update:
+      error: "Lỗi"
+      success: "Thay đổi mật khẩu thành công"
+    message:
+      user_not_found: "Không tìm thấy người dùng"
+      user_is_in_activated: "Nguời dùng chưa kích hoạt!"
+      password_reset: "Đã hết hạn thay đổi mật khẩu."
