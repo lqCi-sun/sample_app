@@ -46,6 +46,7 @@ vi:
       user_deleted: "Đã xóa tài khoản người dùng"
       delete_fail: "Xóa thất bại"
       not_authorized: "Tài khoản của bạn chưa được cấp quyền thực hiện chức năng này"
+      check_mail: "Kiểm tra mail của bạn để kích hoạt tài khoản này."
     new:
       title: "Đăng ký"
     edit:
@@ -59,6 +60,12 @@ vi:
     form:
       submit_button: "Lưu"
       password_confirmation: "Xác nhận"
+  user_mailer:
+    message:
+      hi: "Chào "
+      welcome: "chào mừng đến với Sample App! Nhấp vào link sau đây để kích hoạt tài khoản:"
+      activate: "Kích hoạt"
+    account_activation: "Kích hoạt tài khoản"
   sessions:
     new:
       title: "Đăng nhập"
@@ -81,3 +88,8 @@ vi:
     error_messages:
       error: "Lỗi"
       the_form_contains: "Form có"
+  account_activations:
+    edit:
+      message:
+        account_activated: "Đã kích hoạt"
+        invalid_activation_link: "Không đúng link"

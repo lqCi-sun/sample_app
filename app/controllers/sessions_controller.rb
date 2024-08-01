@@ -1,16 +1,11 @@
 class SessionsController < ApplicationController
-  before_action :load_user, only: :create
+  before_action :find_user, only: :create
 
   def create
-    if @user.authenticate params.dig(:session, :password)
-      reset_session
-      log_in @user
-      remember_me = params.dig(:session, :remember_me)
-      remember_me == "1" ? remember(@user) : forget(@user)
-      redirect_to @user, status: :see_other
+    if authenticated? && activated?
+      handle_successful_login
     else
-      flash.now[:danger] = t ".message.invalid_email_password_combination"
-      render :new, status: :unprocessable_entity
+      handle_failed_login
     end
   end
 
@@ -21,10 +16,28 @@ class SessionsController < ApplicationController
 
   private
 
-  def load_user
+  def find_user
     @user = User.find_by(email: params.dig(:session, :email)&.downcase)
-    return if @user
+  end
 
+  def authenticated?
+    @user&.authenticate(params.dig(:session, :password))
+  end
+
+  def activated?
+    @user.activated?
+  end
+
+  def handle_successful_login
+    forwarding_url = session[:forwarding_url]
+    reset_session
+    remember_me = params.dig(:session, :remember_me)
+    remember_me == "1" ? remember(@user) : forget(@user)
+    log_in(@user)
+    redirect_to forwarding_url || @user
+  end
+
+  def handle_failed_login
     flash.now[:danger] = t ".message.invalid_email_password_combination"
     render :new, status: :unprocessable_entity
   end

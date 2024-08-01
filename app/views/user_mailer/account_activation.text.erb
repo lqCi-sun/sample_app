@@ -1,0 +1,7 @@
+<p><%= t "user_mailer.message.hi" %> <%= @user.name %>,</p>
+
+<p>
+  <%= t "user_mailer.message.welcome" %>
+</p>
+
+<%= edit_account_activation_url(id: @user.activation_token, email: @user.email) %>
