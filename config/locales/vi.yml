@@ -28,6 +28,7 @@ vi:
         main: "Đây là trang chính cho sample app %{rails_url}."
         rails: "Ruby On Rails Tutorial"
         sign_up: "Đăng ký ngay!"
+        feed: "Bảng tin"
   activerecord:
     models:
       user: "Người dùng"
@@ -60,6 +61,8 @@ vi:
     form:
       submit_button: "Lưu"
       password_confirmation: "Xác nhận"
+    show:
+      microposts: "Các bài đăng"
   user_mailer:
     message:
       hi: "Chào "
@@ -87,6 +90,7 @@ vi:
     create:
       message:
         invalid_email_password_combination: "Mật khẩu hoặc email không hợp lệ"
+        warning_account_not_activated: "Tài khoản chưa được kích hoạt."
     attributes:
       user:
         email: "Email"
@@ -95,6 +99,13 @@ vi:
     error_messages:
       error: "Lỗi"
       the_form_contains: "Form có"
+    micropost_form:
+      new: "Tạo bài đăng mới..."
+      max_size: "Kích thước file không lớn hơn 5MB."
+      post: "Đăng"
+    user_info:
+      view_profile: "Xem hồ sơ của tôi"
+      micropost: "Các bài đăng"
   account_activations:
     edit:
       message:
@@ -123,3 +134,18 @@ vi:
       user_not_found: "Không tìm thấy người dùng"
       user_is_in_activated: "Nguời dùng chưa kích hoạt!"
       password_reset: "Đã hết hạn thay đổi mật khẩu."
+  microposts:
+    message:
+      created: "Bài đăng đã được tạo "
+      deleted: "Đã xóa bài đăng"
+      delete_failed: "Xóa bài đăng thất bại"
+      invalid: "Bài đăng không hợp lệ"
+      image_format: "Ảnh tải lên cần hợp lệ"
+      size_max: "phải nhỏ hơn 5MB"
+    micropost:
+      time: "Đã được đăng %{time} trước"
+      delete: "Xóa"
+      confirm: "Vui lòng xác nhận"
+  js:
+    micropost:
+      max_size_error: "Kích thước tối đa của tập tin là 5MB. Vui lòng chọn lại."

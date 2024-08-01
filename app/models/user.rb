@@ -3,6 +3,12 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = Regexp.new(Settings.user.email.valid)
   RESET_PASSWORD_PARAMS = %i(password password_confirmation).freeze
 
+  attr_accessor :remember_token, :activation_token, :reset_token
+
+  before_save :downcase_email
+  before_create :create_activation_digest
+  has_many :microposts, dependent: :destroy
+
   validates :name, presence: true,
     length: {maximum: Settings.user.name.max_length}
   validates :email, presence: true,
@@ -10,10 +16,7 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false},
     allow_nil: true
 
-  before_save :downcase_email
-  before_create :create_activation_digest
   has_secure_password
-  attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :sorted, lambda {|order_by = "name", direction = "asc"|
     order(order_by => direction)
@@ -32,6 +35,10 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def feed
+    microposts
   end
 
   def password_reset_expired?
