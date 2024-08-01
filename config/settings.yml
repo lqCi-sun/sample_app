@@ -7,11 +7,6 @@ links:
     book: "https://www.railstutorial.org/book"
     help: "https://www.railstutorial.org/help"
 user:
-  maxlength_user_name: 50
-  maxlength_user_email: 255
-  valid_email: \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z
-
-user:
   name:
     type: string
     max_length: 50
@@ -27,4 +22,5 @@ user:
   image:
     profile: 90
     list: 50
+  password_reset_expired: 2
 page_10: 10
