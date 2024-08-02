@@ -24,3 +24,14 @@ user:
     list: 50
   password_reset_expired: 2
 page_10: 10
+digit_140: 140
+digit_50: 50
+micropost:
+  image:
+    width: 500
+    height: 500
+    max_size: 5
+    allowed_types:
+      - image/jpeg
+      - image/gif
+      - image/png

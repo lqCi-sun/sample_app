@@ -28,6 +28,7 @@ en:
         main: "This is the home page for the %{rails_url} sample application."
         rails: "Ruby On Rails Tutorial"
         sign_up: "Sign up now!"
+        feed: "Feed"
   activerecord:
     models:
       user: "User"
@@ -60,6 +61,8 @@ en:
     form:
       submit_button: "Submit"
       password_confirmation: "Confirmation"
+    show:
+      microposts: "Microposts"
   user_mailer:
     message:
       hi: "Hi "
@@ -70,8 +73,7 @@ en:
       reset_password: "Reset password"
       password_reset_text: "To reset your password click the link below:"
       password_reset_noti: "This link will expire in two hours."
-      password_reset_confirm: "If you did not request your password to be reset,
-      please ignore this email and your password will stayas it is."
+      password_reset_confirm: "If you did not request your password to be reset, please ignore this email and your password will stayas it is."
     account_activation: "Account activation"
   sessions:
     new:
@@ -97,6 +99,13 @@ en:
     error_messages:
       error: "error"
       the_form_contains: "The form contains"
+    micropost_form:
+      new: "Compose new micropost..."
+      max_size: "Maximum file size is 5MB. Please choose a smaller file."
+      post: "Post"
+    user_info:
+      view_profile: "View profile"
+      micropost: "micropost"
   account_activations:
     edit:
       message:
@@ -125,3 +134,18 @@ en:
       user_not_found: "User not found!"
       user_is_in_activated: "User is in_actived!"
       password_reset: "Password reset has expired."
+  microposts:
+    message:
+      created: "Micropost created"
+      deleted: "Micropost deleted"
+      delete_failed: "Micropost deletion failed"
+      invalid: "Invalid micropost"
+      image_format: "must be a valid image format"
+      size_max: "should be less than 5MB"
+    micropost:
+      time: "Posted %{time} ago"
+      delete: "Delete"
+      confirm: "You sure?"
+  js:
+    micropost:
+      max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
