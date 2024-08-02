@@ -6,6 +6,7 @@ class Micropost < ApplicationRecord
                                          Settings.micropost.image.width]
   end
   scope :recent_posts, ->{order(created_at: :desc)}
+  scope :relate_post, ->(user_ids){where user_id: user_ids}
   validates :content, presence: true, length: {maximum: Settings.digit_140}
   validates :image, content_type: {in: Settings.micropost.image.allowed_types,
                                    message: I18n.t("message.image_format")},

@@ -63,6 +63,12 @@ en:
       password_confirmation: "Confirmation"
     show:
       microposts: "Microposts"
+    show_follow:
+      view_profile: "View profile"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    following: "Following"
+    followers: "Followers"
   user_mailer:
     message:
       hi: "Hi "
@@ -149,3 +155,6 @@ en:
   js:
     micropost:
       max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+  relationships:
+    user_notfound: "User Not Found"
+    not_found: "Relationships Not Found"

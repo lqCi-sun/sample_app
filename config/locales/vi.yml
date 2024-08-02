@@ -63,6 +63,12 @@ vi:
       password_confirmation: "Xác nhận"
     show:
       microposts: "Các bài đăng"
+    show_follow:
+      view_profile: "Xem hồ sơ"
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"
+    following: "Đang theo dõi"
+    followers: "người theo dõi"
   user_mailer:
     message:
       hi: "Chào "
@@ -149,3 +155,42 @@ vi:
   js:
     micropost:
       max_size_error: "Kích thước tối đa của tập tin là 5MB. Vui lòng chọn lại."
+  relationships:
+    user_notfound: "Không tìm thấy người dùng"
+    not_found: "Không có quan hệ"
+  datetime:
+    distance_in_words:
+      less_than_x_seconds:
+        one: "chưa đến 1 giây"
+        other: "chưa đến %{count} giây"
+      x_seconds:
+        one: "1 giây"
+        other: "%{count} giây"
+      half_a_minute: "nửa phút"
+      less_than_x_minutes:
+        one: "chưa đến một phút"
+        other: "chưa đến %{count} phút"
+      x_minutes:
+        one: "1 phút"
+        other: "%{count} phút"
+      about_x_hours:
+        one: "khoảng 1 giờ"
+        other: "khoảng %{count} giờ"
+      x_days:
+        one: "1 ngày"
+        other: "%{count} ngày"
+      about_x_months:
+        one: "khoảng 1 tháng"
+        other: "khoảng %{count} tháng"
+      x_months:
+        one: "1 tháng"
+        other: "%{count} tháng"
+      about_x_years:
+        one: "khoảng 1 năm"
+        other: "khoảng %{count} năm"
+      over_x_years:
+        one: "hơn 1 năm"
+        other: "hơn %{count} năm"
+      almost_x_years:
+        one: "Gần 1 năm"
+        other: "Gần %{count} năm"
